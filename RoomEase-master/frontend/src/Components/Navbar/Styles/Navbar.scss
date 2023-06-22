@@ -1,0 +1,35 @@
+@import '../../sassStyles.scss'; 
+
+.navbar_container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2em;
+    align-items: center;
+    background-color: $header-footer-banner-color;
+    width: 100%;
+    .navbar {
+        grid-area: navbar;
+        display: grid;
+        grid-template-columns: 240px auto 150px;
+        grid-template-rows: 70px;
+        grid-template-areas: "navbar_logo . navbar_buttons";
+        .navbar_logo {
+            grid-area: navbar_logo;
+            display: grid;
+            grid-template-columns: 70px 170px;
+            .navbar_logo_name {
+                margin: auto auto auto 0;
+            }
+        }
+        .navbar_buttons {
+            grid-area: navbar_buttons;
+            align-items: center;
+            .navbar_buttons_icons {
+                position: relative;
+                top: 35px;
+                right: 150px;
+                transform: translateY(-50%) translateX(115%);
+                }
+        }
+    }
+}
